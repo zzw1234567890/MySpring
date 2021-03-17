@@ -1,4 +1,4 @@
-package zzw.demo.myspring.entity;
+package zzw.demo.myspring.test;
 
 import zzw.demo.myspring.core.aop.annotation.*;
 import zzw.demo.myspring.core.ioc.annotation.Lazy;
@@ -6,7 +6,7 @@ import zzw.demo.myspring.core.ioc.annotation.Lazy;
 @Lazy
 @Aspect
 public class UserAspect {
-    @PointCut(beanName = "zzw.demo.myspring.entity.UserServiceImpl", method = "*")
+    @PointCut(beanName = "zzw.demo.myspring.test.UserServiceImpl", method = "*")
     public void pointCut(){}
 
     @Around

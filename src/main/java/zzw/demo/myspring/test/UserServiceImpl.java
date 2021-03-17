@@ -1,4 +1,4 @@
-package zzw.demo.myspring.entity;
+package zzw.demo.myspring.test;
 
 import lombok.Data;
 import zzw.demo.myspring.core.ioc.annotation.Autowired;

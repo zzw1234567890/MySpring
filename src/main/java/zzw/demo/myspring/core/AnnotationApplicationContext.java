@@ -275,7 +275,10 @@ public class AnnotationApplicationContext implements ApplicationContext{
         if (url == null) {
             return;
         }
-        File dir = new File(url.getFile());
+        // 解决单元测试时扫描包的路径问题
+        String path = url.getPath().replaceFirst("out/test", "out/production");
+        File dir = new File(path);
+        // File dir = new File(url.getFile());
         // 加载要扫描包下的类
         for (File file : Objects.requireNonNull(dir.listFiles())) {
             if (file.isDirectory()){
